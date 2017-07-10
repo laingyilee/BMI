@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel = "stylesheet " type = "text/css " href = "css/style.css " />
+  <script>
+    var Data=JSON.parse(localStorage.getItem('BMIvalue'));
+    function oldList(){
+    var str='';
+    var len = Data.length;
+    for (var i = 0; len > i; i++) {
+      str+= Data[i].value;
+    }
+    list.innerHTML = str;
+    }
+  </script>
+  <title>BMI計算</title>
+</head>
+<body onLoad="oldList(Data)">
+    <div class="top">
+      <div class="topbar">
+         <div class="logo"></div>
+          <div class="button">
+              <input id="Btn" class="" type="button" value="看結果">
+              <div id="block" class=""><h3></h3><label for="BMI">BMI</label><div class="result"></div></div>
+          </div>    
+          <div class="input">
+        <div class="title">身高cm</div>
+        <input id="heightId" placeholder="請輸入身高" type="text">
+        <div class="title">體重kg</div>
+        <input id="weightId" placeholder="請輸入體重" type="text">
+      </div>
+      </div>
+      
+    </div>
+    <div class="content">
+      <h3 align="center">BMI</h3>
+      <ul class="list"></ul>
+    </div>
+    <div class="footer"><img src="../BMI/images/BMICLogo.png" alt="LOGO"></div>   
+    <script src="js/index.js"></script>
+</body>
+</html>

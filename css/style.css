@@ -1,0 +1,316 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html{
+    height: 100%;
+    
+}
+
+/*排版css*/
+body {
+	background-color: #efefef;
+	font-size: 16px;
+	font-family: Arial,"微軟正黑體","Helvetica Neue",Helvetica,sans-serif,"新細明體";
+}
+.logo {
+	float:left;
+	height: 177px;
+	width: 177px;
+	background: url(../images/BMICLogo.png) center no-repeat;
+	background-size: contain;
+}
+.input {
+	overflow: hidden;    
+	font-size: 18px;
+	color:#FFD366;
+	padding-left: 92px;
+}
+.input input {
+    border-radius: 5px;
+	border: 2px solid #FFD366;
+	background: rgba(255,255,255,0.2);
+	margin: 3px 0;
+	color: #ffffff;
+	height: 40px;
+    width: 250px;
+	padding: 0 8px;
+	font-family: Arial,"微軟正黑體";
+}
+.button input:hover {
+	background-color:#ffc431;
+	box-shadow: 0 1px 6px 3px rgba(255,196,50,0.64);
+}
+
+.button input.is-active {
+	background-color:#dea921;
+}
+.title {
+	margin-top: 10px;
+}
+
+.button {
+	float: right;
+	margin: 25px 0;
+	position: relative;
+}
+.button input {
+	background-color: #ffd366;
+    border: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+	font-size: 23px;
+	z-index: 1;
+	font-family: Arial,"微軟正黑體";
+}
+.top {
+	background-color: #424242;
+	min-height: 300px;
+}
+.topbar {
+	width: 720px;
+    margin: 0 auto;
+	padding-top: 72px;
+}
+.topbar::after {
+	content: "";
+	display: block;
+	height: 0;
+	clear:both;
+	overflow: hidden;
+}
+
+.content {
+	max-width: 50%;
+	margin: 0 auto;
+	min-height: 500px;
+}
+
+.content h3 {
+	font-size: 24px;
+	margin-top: 48px;
+	margin-bottom: 36px;
+}
+
+.list li {
+	position: relative;
+    background-color: #fff;
+    margin-bottom: 16px;
+} 
+.list li:before{
+	content: "";
+	display: inline-block;
+	width: 3px;
+	height: 66px;
+	vertical-align: middle;
+	margin-right: 15px;
+}
+
+.list li span {
+	line-height: 64px;
+	margin-right: 10px;
+}
+.list li i {
+	font-size: 12px;
+	vertical-align: middle;
+}
+
+
+.list li.green:before{
+	background-color: #86D73F;
+	box-shadow: 2px 0px 3px 0px rgba(134,215,63,0.29);
+}
+
+.list li.blue:before{
+	background-color: #31BAF9;
+	box-shadow: 2px 0px 3px 0px rgba(49,186,249,0.29);
+}
+
+.list li.orange0:before{
+	background-color: #FF982D;
+	box-shadow: 2px 0px 3px 0px rgba(255,152,45,0.29);
+}
+
+.list li.orange1:before{
+	background-color: #FF6C02;
+	box-shadow: 2px 0px 3px 0px rgba(255,108,3,0.29);
+}
+
+.list li.orange2:before{
+	background-color: #FF1200;
+	box-shadow: 2px 0px 3px 0px rgba(255,18,0,0.29);
+}
+
+.list li a {
+    text-decoration: none;
+    position: absolute;
+    font-size: 16px;
+    right: 0px;
+    top: 0;
+    line-height: 50px;
+    color: #ffffff;
+    bottom: 0;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 10px;
+    background-color: #e4dede;
+}
+
+#block {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+	background-color: #424242;
+    top: 0;
+    border-radius: 50%;
+    border: 6px solid transparent;
+    box-sizing: border-box;
+    line-height: 100px;
+    text-align: center;
+    color:white;
+    z-index: -1;
+}
+
+.block1 {
+	color: #86D73F !important;
+	border-color: #86D73F !important;
+	z-index: 1 !important;
+}
+.block2 {
+	color: #31BAF9 !important;
+	border-color: #31BAF9 !important;
+	z-index: 1 !important;
+}
+.block3 {
+	color: #FF982D !important;
+	border-color: #FF982D !important;
+	z-index: 1 !important;
+}
+
+.block4 {
+	color: #FF6C02 !important;
+	border-color: #FF6C02 !important;
+	z-index: 1 !important;
+}
+
+.block5 {
+	color: #FF1200 !important;
+	border-color: #FF1200 !important;
+	z-index: 1 !important;
+}
+
+#block label {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+}
+
+#block h3 {
+	font-size: 32px;
+}
+.today {
+    color: #b7b0b0;
+}
+
+.result {
+    position: absolute;
+    top: 0;
+    right: -55px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.block4 .result, .block5 .result {
+	right:-100px;
+}
+
+.footer {
+	background-color: #717171;
+    padding: 20px;
+}
+
+.footer img {
+	display: block;
+    margin: 0 auto;
+}
+
+#block:after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #fff url(../images/cycle.png) center no-repeat;
+    z-index: 10;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    border: 3px solid #424242;
+}
+
+.block1:after {
+	background: #86D73F url(../images/cycle.png) center no-repeat !important;
+}
+.block2:after {
+    background: #31BAF9 url(../images/cycle.png) center no-repeat !important;
+}
+.block3:after {
+    background: #FF982D url(../images/cycle.png) center no-repeat !important;
+}
+
+.block4:after {
+    background: #FF6C02 url(../images/cycle.png) center no-repeat !important;
+}
+
+.block5:after {
+    background: #FF1200 url(../images/cycle.png) center no-repeat !important;
+}
