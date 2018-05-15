@@ -5,20 +5,20 @@
   <meta name="viewport" content="width=device-width">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <link rel = "stylesheet " type = "text/css " href = "css/style.css " />
-  <script>
-    var Data=JSON.parse(localStorage.getItem('BMIvalue'));
+  <!-- <script>
+    var val;
     function oldList(){
     var str='';
-    var len = Data.length;
+    var len = val.length;
     for (var i = 0; len > i; i++) {
-      str+= Data[i].value;
+      str+= val[i].value;
     }
     list.innerHTML = str;
     }
-  </script>
+  </script> -->
   <title>BMI計算</title>
 </head>
-<body onLoad="oldList(Data)">
+<body>
     <div class="top">
       <div class="topbar">
          <div class="logo"></div>
@@ -37,9 +37,20 @@
     </div>
     <div class="content">
       <h3 align="center">BMI</h3>
-      <ul class="list"></ul>
+      <ul id="bmicount" class="list"></ul>
     </div>
-    <div class="footer"><img src="../BMI/images/BMICLogo.png" alt="LOGO"></div>   
+    <div class="footer"><img src="../BMI/images/BMICLogo.png" alt="LOGO"></div>
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAxIYN_TBmKTKmzflfQXl-18KQr0k8ch8A",
+        authDomain: "bmitest-16eca.firebaseapp.com",
+        databaseURL: "https://bmitest-16eca.firebaseio.com",
+        storageBucket: "bmitest-16eca.appspot.com"
+      };
+      firebase.initializeApp(config);
+    </script>
     <script src="js/index.js"></script>
 </body>
 </html>
